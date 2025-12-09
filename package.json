@@ -29,6 +29,10 @@
   ],
   "author": "Your Name",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thor-commerce/thor-better-auth-plugin.git"
+  },
   "peerDependencies": {
     "better-auth": "^1.0.0"
   },
