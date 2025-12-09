@@ -1,0 +1,46 @@
+{
+  "name": "@thor-commerce/better-auth-thor",
+  "version": "0.1.0",
+  "description": "Better Auth plugin for Thor Commerce authentication",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:real": "vitest run src/__tests__/real-integration.test.ts"
+  },
+  "keywords": [
+    "better-auth",
+    "thor-commerce",
+    "authentication"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "peerDependencies": {
+    "better-auth": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@vitest/ui": "^4.0.15",
+    "better-auth": "^1.0.0",
+    "dotenv": "^17.2.3",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.15"
+  },
+  "dependencies": {
+    "zod": "^4.1.13"
+  }
+}
