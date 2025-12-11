@@ -15,6 +15,7 @@ describe("getUserInfo", () => {
       firstName: "John",
       lastName: "Doe",
       email: "john.doe@example.com",
+      groups: []
     };
 
     const mockResponse = {
@@ -161,6 +162,7 @@ describe("getUserInfo", () => {
       firstName: "Alice",
       lastName: "Johnson",
       email: "alice.johnson@test.com",
+      groups: [],
     });
   });
 });

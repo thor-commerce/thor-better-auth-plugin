@@ -80,6 +80,7 @@ describe("Integration: Login and Fetch User Info", () => {
       firstName: "Integration",
       lastName: "Test",
       email: "integration@test.com",
+      groups: [],
     });
 
     // Verify both API calls were made

@@ -58,6 +58,7 @@ describe("Real Integration Test - Demo Environment", () => {
     console.log(`📧 User: ${result.user.email}`);
     console.log(`👤 Name: ${result.user.name}`);
     console.log(`🆔 User ID: ${result.user.id}`);
+    console.log(`👥 Groups: ${result.user.groups.map(g => g.name).join(", ")}`);
     console.log(`🔑 Access Token: ${result.session.token.substring(0, 20)}...`);
     console.log(`⏰ Session expires: ${result.session.expiresAt.toISOString()}`);
   }, 30000); // 30 second timeout for real API calls

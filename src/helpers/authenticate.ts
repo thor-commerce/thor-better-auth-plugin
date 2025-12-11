@@ -9,6 +9,7 @@ export type SessionData = {
     createdAt: Date;
     updatedAt: Date;
     emailVerified: boolean;
+    groups: Array<{ id: string; name: string }>;
   };
   session: {
     id: string;
@@ -56,6 +57,7 @@ export async function authenticateAndCreateSession(
       createdAt: new Date(now),
       updatedAt: new Date(now),
       emailVerified: true,
+      groups: userInfo.groups
     },
     session: {
       id: refreshToken,

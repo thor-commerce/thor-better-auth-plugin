@@ -3,6 +3,7 @@ type UserInfo = {
   firstName: string;
   lastName: string;
   email: string;
+  groups: Array<{ id: string; name: string }>;
 };
 
 async function getUserInfo(
@@ -23,6 +24,12 @@ async function getUserInfo(
             firstName
             lastName
             email
+            customerGroups {
+              nodes {
+                id
+                name
+              }
+            }
           }
         }
       `,
@@ -36,11 +43,17 @@ async function getUserInfo(
 
   if (!customer) return null;
 
+
+
   return {
     id: customer.id,
     firstName: customer.firstName,
     lastName: customer.lastName,
     email: customer.email,
+    groups: customer.customerGroups?.nodes?.map((group: any) => ({
+      id: group.id,
+      name: group.name,
+    })) ?? [],
   };
 }
 
